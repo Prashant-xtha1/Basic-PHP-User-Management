@@ -1,5 +1,5 @@
 <?php session_start();
-include "./connection.php";
+include "connection.php";
 if(isset($_POST['submit'])) {
   $fname = $_POST['fname'];
   $uname = $_POST['uname'];
