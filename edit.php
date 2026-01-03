@@ -22,6 +22,7 @@ $res = mysqli_query($conn, $sql);
       <?php if($res):
         while($row = mysqli_fetch_assoc($res)): ?>
         <form action="update.php" method="post" name= "user_form" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
           <div class="field-group">
             <label for="fname">Full Name </label>
             <input type="text" id="fname" name="fullname" value="<?php echo $row['fullname']; ?>">
