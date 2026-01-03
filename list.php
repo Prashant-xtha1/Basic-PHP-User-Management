@@ -42,7 +42,7 @@ $res = mysqli_query($conn, $sql);
           <td><?php echo $row['id']; ?></td>
           <td><?php echo $row['fullname']; ?></td>
           <td><?php echo $row['email']; ?></td>
-          <td><img src= "./public/<?php echo $row['photo']; ?>" alt= "Photo Daal"></td>
+          <td><img src= "./public/<?php echo $row['photo']; ?>" width="100" alt= "Photo Daal"></td>
           <td>
             <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-edit">
               <span class="icon icon-edit"></span>Edit
