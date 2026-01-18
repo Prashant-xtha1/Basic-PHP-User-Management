@@ -1,4 +1,7 @@
 <?php session_start();
+if(!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+  header("Location: login.php");
+}
 include "connection.php";
 
 $sql = "SELECT id, fullname, email, photo FROM tbl_users";
@@ -15,6 +18,16 @@ $res = mysqli_query($conn, $sql);
 </head>
 
 <body>
+  <header class="header">
+    <a href="#" class="site-logo" title="User Management">Logo</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="list.php">User List</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
   <main class="container large">
     <h1 class="page-title">User List</h1>
     <?php 
